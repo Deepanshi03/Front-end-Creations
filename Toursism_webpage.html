@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="This is a Tourism Website">
+    <meta name="Keywords" content="Tourism, Happy Tour">
+    <title>Make My Holiday</title>
+    <style>
+        body {
+            background-image: url('https://i.pinimg.com/originals/fe/77/fa/fe77fa037c2a1515c6a3d8093c4dbe66.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        #logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            height: 100px;
+            width: 95px;
+            border: 4px solid darkred;
+            z-index: 100;
+            box-shadow: 5px 5px 100px gold;
+
+        }
+
+        .nvb {
+            display: inline-block;
+            position: absolute;
+            width: 1235px;
+            height: 40px;
+            left: 140px;
+            top: 31px;
+            padding: 7px;
+            background: rgb(255, 255, 255, 0.5);
+            border-radius: 10px;
+            z-index: 0;
+            box-shadow: 5px 5px 20px black;
+        }
+        .drpdwn .drpbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color:black;
+            padding: 0px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 8px;
+            font-size: 21px;
+            font-weight: bold;
+            position: absolute;
+            top: 13px;
+        }
+
+        .drpbtn:hover {
+            text-decoration: underline;
+            color: black;
+        }
+
+        .drpdwn-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .drpdwn-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .drpdwn-content a:hover {
+            background-color:indianred;
+        }
+
+        .drpdwn:hover .drpdwn-content {
+            display: block;
+            position: absolute;
+            top: 45px;
+        }
+
+        .nvb li {
+            display: inline-block;
+            justify-content: space-around;
+        }
+
+        .nvb li a {
+            text-decoration: none;
+            padding: 25px;
+            margin: 5px;
+            color: black;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .nvb li a:hover {
+            text-decoration: underline;
+            color: black;
+        }
+        .btn1 {
+            position: absolute;
+            background-color: darkred;
+            color: white;
+            top: 50px;
+            left: 1420px;
+            padding: 6px;
+            box-shadow: 5px 5px 10px darkgrey;
+            transition-property: size;
+            transition-duration: 2s;
+            transition-timing-function: ease-in-out;
+            transition: all 1s ease-out;
+        }
+        .btn1:hover {
+            transform: scale(1.2);
+            text-decoration: underline;
+        }
+
+        .cont1 {
+            display: inline-block;
+            background: rgb(255, 255, 255, 0.7);
+            position: absolute;
+            top: 200px;
+            left: 200px;
+            box-sizing: border-box;
+            border: 4px solid whitesmoke;
+            margin: 5px auto;
+            padding: 40px 50px;
+            width: 40%;
+            font-size: 18px;
+            box-shadow: 5px 5px 20px black;
+        }
+
+        .cont2 {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.7);
+            position: absolute;
+            top: 200px;
+            left: 850px;
+            box-sizing: border-box;
+            border: 4px solid whitesmoke;
+            margin: 5px auto;
+            padding: 40px 50px;
+            box-sizing: border-box;
+            box-shadow: 5px 5px 20px black;
+        }
+
+        .form_btn {
+            transition-property: size;
+            transition-duration: 2s;
+            transition-timing-function: ease-in-out;
+            transition: all 1s ease-out;
+            box-shadow: 5px 5px 10px grey;
+        }
+
+        .form_btn:hover {
+            transform: scale(1.2);
+            text-decoration: underline;
+        }
+
+        .search:hover {
+            text-decoration: underline;
+            color: bisque;
+            transform: scale(1.2);
+        }
+
+        .destination {
+            position: absolute;
+            top: 540px;
+            left: 510px;
+            box-sizing: border-box;
+            border-radius: 9px;
+            background-color: bisque;
+            border: 4px solid darkred;
+            color: black;
+            text-shadow: 5px 5px 20px gray;
+            padding: 6px 7px;
+            font-size: 30px;
+            font-family: sans-serif;
+            box-shadow: 4px 4px 100px gold;
+        }
+
+        .cont3 {
+            box-sizing: border-box;
+            border-radius: 15px;
+            display: inline-block;
+            background-color: brown;
+            color: aliceblue;
+            border: 5px solid darkred;
+            border-style: groove;
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            top: 650px;
+            left: 70px;
+            box-shadow: 5px 5px 20px black;
+        }
+
+        .cont4 {
+            box-sizing: border-box;
+            border-radius: 15px;
+            display: inline-block;
+            background-color: brown;
+            color: aliceblue;
+            border: 5px solid darkred;
+            border-style: groove;
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            top: 650px;
+            left: 450px;
+            box-shadow: 5px 5px 20px black;
+        }
+
+        .cont5 {
+            box-sizing: border-box;
+            border-radius: 15px;
+            display: inline-block;
+            background-color: brown;
+            color: aliceblue;
+            border: 5px solid darkred;
+            border-style: groove;
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            top: 650px;
+            left: 810px;
+            box-shadow: 5px 5px 20px black;
+        }
+
+        .cont6 {
+            box-sizing: border-box;
+            border-radius: 15px;
+            display: inline-block;
+            background-color: brown;
+            color: aliceblue;
+            border: 5px solid darkred;
+            border-style: groove;
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            top: 650px;
+            left: 1170px;
+            box-shadow: 5px 5px 20px black;
+        }
+
+        .search {
+            position: absolute;
+            top: 784px;
+            left: 680px;
+            font-size: 18px;
+            background-color: bisque;
+            border: 4px solid darkred;
+            padding: 4px 5px;
+            color: black;
+            font-weight: bold;
+            transition-property: size;
+            transition-duration: 2s;
+            transition-timing-function: ease-in-out;
+            transition: all 1s ease-out;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px grey;
+        }
+
+        .search:hover {
+            color: black;
+            text-decoration: underline;
+            transform: scale(1.2);
+        }
+
+        .ribbon {
+            font-size: 27px !important;
+            width: 50%;
+            position: absolute;
+            top: 830px;
+            left: 370px;
+            background:#db2020;;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            margin: 2em auto 3em;
+            box-shadow: 4px 4px 20px black;
+        }
+
+        .ribbon:before,
+        .ribbon:after {
+            content: "";
+            position: absolute;
+            display: block;
+            bottom: -1em;
+            border: 1.5em solid #a00d0d;
+            z-index: -1;
+        }
+
+        .ribbon:before {
+            left: -2em;
+            border-right-width: 1.5em;
+            border-left-color: transparent;
+        }
+
+        .ribbon:after {
+            right: -2em;
+            border-left-width: 1.5em;
+            border-right-color: transparent;
+        }
+
+        .ribbon .ribbon-content:before,
+        .ribbon .ribbon-content:after {
+            content: "";
+            position: absolute;
+            display: block;
+            border-style: solid;
+            border-color: #4d0305 transparent transparent transparent;
+            bottom: -1em;
+        }
+
+        .ribbon .ribbon-content:before {
+            left: 0;
+            border-width: 1em 0 0 1em;
+        }
+
+        .ribbon .ribbon-content:after {
+            right: 0;
+            border-width: 1em 1em 0 0;
+        }
+        .pic {
+            box-sizing: border-box;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 15px;
+            position: absolute;
+            height: 450px;
+            width: 1290px;
+            top: 980px;
+            left: 100px;
+            margin: 10px;
+        }
+
+        .pic a {
+            font-size: 21px;
+            font-weight: bold;
+        }
+
+        .pic section a,
+        ul,
+        details {
+            color: black;
+        }
+        .first {
+            display: inline-block;
+            border: 3px solid white;
+            margin: 3px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .second {
+            display: inline-block;
+            border: 3px solid white;
+            margin: 3px;
+            position: absolute;
+            top: 20px;
+            left: 270px;
+        }
+
+        .third {
+            display: inline-block;
+            border: 3px solid white;
+            margin: 3px;
+            position: absolute;
+            top: 20px;
+            left: 520px;
+        }
+
+        .forth {
+            display: inline-block;
+            border: 3px solid white;
+            margin: 3px;
+            position: absolute;
+            top: 20px;
+            left: 770px;
+        }
+
+        .fifth {
+            display: inline-block;
+            border: 3px solid white;
+            margin: 3px;
+            position: absolute;
+            top: 20px;
+            left: 1020px;
+        }
+        .cont7 {
+            display: inline-block;
+            box-sizing: border-box;
+            background: rgba(255, 255, 255, 0.7);
+            position: absolute;
+            top: 1480px;
+            width: 97%;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .btn2 {
+            position: absolute;
+            top: 2150px;
+            left: 25px;
+            padding: 6px;
+            box-shadow: 5px 5px 10px darkgrey;
+            z-index: 100;
+            transition-property: size;
+            transition-duration: 2s;
+            transition-timing-function: ease-in-out;
+            transition: all 1s ease-out;
+            border: 4px solid darkred;
+        }
+
+        .btn2 a {
+            background-color: darkred;
+            text-decoration: none;
+            color: white;
+        }
+
+        .btn2:hover {
+            text-decoration: underline;
+            transform: scale(1.2);
+        }
+
+
+        .cpyr {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 5px 650px;
+            position: absolute;
+            top: 2210px;
+            text-align: top;
+        }
+    </style>
+</head>
+
+<body>
+    <img id="logo" src="https://cdn4.vectorstock.com/i/1000x1000/95/58/royal-key-hotel-logo-vector-31949558.jpg" alt="">
+    <div class="nvb">
+        <ul>
+            <div class="drpdwn">
+                <button class="drpbtn">Home</button>
+                <div class="drpdwn-content">
+                    <!-- ********************MEMBERSHIP FORM ATTACHED HERE*************************** -->
+                    <a href="CA1_1_FORM.html" target="_blank">Join as Employee</a>
+                </div>
+            </div>
+            <!-- <li>
+                <a href="#" class="active">Home</a>
+            </li> -->
+            <li style="position: absolute;left: 140px;">
+                <a href="#" class="active">About</a>
+            </li>
+            <li style="position: absolute;left: 249px;">
+                <a href="https://www.makemytrip.com/flights/" target="_blank" class="active">Flights</a>
+            </li>
+            <li style="position: absolute;left: 365px;">
+                <a href="https://www.makemytrip.com/railways/" target="_blank" class="active">Trains</a>
+            </li>
+            <li style="position: absolute;left: 468px;">
+                <a href="https://www.makemytrip.com/bus-tickets/" target="_blank" class="active">Buses</a>
+            </li>
+            <li style="position: absolute;left: 569px;">
+                <a href="https://www.makemytrip.com/cabs/" target="_blank" class="active">Cabs</a>
+            </li>
+            <li style="position: absolute;left: 675px;">
+                <a href="https://traveltriangle.com/blog/best-summer-holiday-destinations-in-the-world/" class="active">Destinations</a>
+            </li>
+            <li style="position: absolute;left: 850px;">
+                <a href="https://www.makemytrip.com/holidays-india/" target="_blank" class="active">Holiday Pakages</a>
+            </li>
+            <li style="position: absolute;left: 1060px;">
+                <a href="https://www.makemytrip.com/tripideas/blog/top-10-destinations-adventure-lovers" target="_blank" class="active">Activites</a>
+            </li>
+
+        </ul>
+    </div>
+    <button class="btn1">Contact Us</button>
+
+    <div class="cont1">
+        <p><strong style="font-style: italic;">“Life is either a daring adventure, or nothing at all” &#8211; Helen
+                Keller</strong><br>
+            Travels and trips give us an opportunity to visit new places and meet new people.
+            We try to learn every detail about them. Travels to new places sharpen our power of observation.
+            We form in our minds a picture which may not be forgotten. Travels enable us to meet new people.
+            We get an opportunity to make new friendships. We come to develop a universal outlook. <br>
+            <strong>Choose your Dream Destination with MAKE MY HOLIDAY, Today!!..</strong>
+        </p>
+    </div>
+
+    <div class="cont2">
+        <h2>Become a part of our Family !!</h2>
+        <form id="my_form">
+            Enter Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="Name" id=""
+                placeholder="Name">
+            <br><br>
+            Enter Email Id:&nbsp;&nbsp;&nbsp;<input type="email" name="Email" id="" placeholder="Email">
+            <br><br>
+            Enter Phone no.: <input type="number" name="Number" id="" placeholder="Phone number">
+            <br><br>
+            <input id="Join" type="button" value="Join Family" class="form_btn" onclick="myFunction()"  
+                style="background-color:darkred;color: whitesmoke;font-size: 17px;">&nbsp;&nbsp;&nbsp;
+            <input id="Reset_info" type="button" value="Reset form" class="form_btn" onclick="myFunction2()"
+                style="background-color:darkred;color: whitesmoke;font-size: 17px;">
+        </form>
+    </div>
+    <h2 class="destination">Choose your Dream Destination</h2>
+    <div class="cont3">
+        <h2>Country</h2>
+        Country Name: <input type="text" name="country" id="" placeholder="Country Name">
+    </div>
+    <div class="cont4">
+        <h2>State</h2>
+        State Name: <input type="text" name="state" id="" placeholder="State Name">
+    </div>
+    <div class="cont5">
+        <h2>Arrival</h2>
+        Arrival Date: <input type="date" name="arrival" id="">
+    </div>
+    <div class="cont6">
+        <h2>Departure</h2>
+        Departure Date: <input type="date" name="state" id="">
+    </div>
+    <button class="search">Search Tour Pakage</button>
+
+    <h1 class="ribbon" style="font-size: 30px;">
+        <strong class="ribbon-content">Other Polular Destinations</strong>
+    </h1>
+    <div class="pic">
+        <section class="first">
+            <img src="https://curlytales.com/wp-content/uploads/2021/12/beach-1170x614.jpg" alt="" height="200"
+                width="230">
+            <figcaption style="text-align: center;"><a>Alluring Beaches</a></figcaption>
+                <ul>
+                    <li>Copacabana Beach,Brazil</li>
+                    <li>S.M Beach, California</li>
+                    <li>South Beach,Florida</li>
+                    <li>Waikiki Beach,Hawaii</li>
+                    <li>Navagio Beach, Greece</li>
+                    <li>Maya Bay,Thailand</li>
+                    <li>Spiaggia Grande,Italy</li>
+                    <li>Tulum, Mexican Caribbean</li>
+                </ul>
+        </section>
+        <section class="second">
+            <img src="https://www.heritagedaily.com/wp-content/uploads/2017/05/16279740174_9d932bdf6d_k-scaled.jpg"
+                alt="" height="200" width="230">
+            <figcaption style="text-align: center;"><a>Majestic Forts</a></figcaption>
+                <ul>
+                    <li>Mehrangarh Fort, Jodhpur</li>
+                    <li>Gwalior Fort, Gwalior</li>
+                    <li>Red Fort, Delhi</li>
+                    <li>Amber Fort, Jaipur</li>
+                    <li>Jaisalmer Fort, Jaisalmer</li>
+                    <li>Chittorgarh Fort, Rajasthan</li>
+                    <li>Chittorgarh Fort, Rajasthan</li>
+                    <li>Bhangarh Fort,Bhangarh</li>
+                </ul>
+        </section>
+        <section class="third">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Ko%C5%9Bcielec_view_2.jpg/1200px-Ko%C5%9Bcielec_view_2.jpg"
+                alt="" height="200" width="230">
+            <figcaption style="text-align: center;"><a>Heavenly Mountains</a></figcaption>
+                <ul>
+                    <li>Mount Everest,Nepal</li>
+                    <li>Mount Fuj,Japan</li>
+                    <li>Mount Kilimanjaro,Tanzania</li>
+                    <li>Mount Olympus,Greece</li>
+                    <li>K2,Karakoram Range</li>
+                    <li>Denali,US</li>
+                    <li>Mont Blanc,France</li>
+                </ul>
+        </section>
+        <section class="forth">
+            <img src="https://forest500.org/sites/default/files/styles/f500_scale_and_crop_1920x1080/public/adobestock_162537886.jpeg?itok=D8nEIF_B&timestamp=1642001074"
+                alt="" height="200" width="230">
+            <figcaption style="text-align: center;"><a>Dazzling Forests</a></figcaption>
+                <ul>
+                    <li>Daintree Forest,Australia</li>
+                    <li>Crooked Forest,Poland</li>
+                    <li>Redwood Forest,USA</li>
+                    <li>Sagano Bamboo Forest,Japan</li>
+                    <li>Great Bear Rainforest,Canada</li>
+                    <li>Jiuzhaigou Valley,China</li>
+                </ul>
+        </section>
+        <section class="fifth">
+            <img src="https://image.cnbcfm.com/api/v1/image/106287174-1575951473288gettyimages-1128070598.jpeg?v=1589377183&w=1600&h=900"
+                alt="" height="200" width="230">
+            <figcaption style="text-align: center;"><a>Great Deserts</a></figcaption>
+                <ul>
+                    <li>Antarctic Desert</li>
+                    <li>Arctic Desert</li>
+                    <li>The Sahara Desert</li>
+                    <li>Arabian Desert</li>
+                    <li>Great Victoria Desert</li>
+                    <li>Thar Desert</li>
+                </ul>
+ 
+        </section>
+    </div>
+    <div class="cont7">
+        <h3
+            style="font-size: 32px;background-color:brown;box-shadow: 3px 3px 0px black; border: 5px solid darkred; color: whitesmoke; border-radius: 10px;">
+            Fooding &#38; Lodging</h3><br>
+        <img style="float: left;width: 405px; height: 240px;margin: 4px;border: 5px solid darkred; box-shadow:5px 5px 100px goldenrod"
+            src="https://i.pinimg.com/originals/30/6a/f3/306af3bc7c6ab631736ee2a660f28a3f.jpg" alt="">
+        <p style="font-size: 24px;text-align: left;">We never fail to provide The Most Spacious Apartments/Resorts/Rooms
+            to our Guests.
+            Our Rooms are spacious with high ceilings, large windows, an open balcony and a beautiful view. Stay cool
+            with central A/C and wind-down comfortably in the Rooms. <br>
+            Our Hotels have All the Facilites You may need during your stay. Starting from Swimming Pools, Gyms, Gamimg
+            Rooms, Restaurent,
+            Open-Sky Terrace, Gardens, Movie Halls etc</p><br><br><br>
+        <img style="float: right;width: 405px; height: 240px;margin: 5px;border: 5px solid darkred; box-shadow:5px 5px 100px goldenrod"
+            src="https://cdn-prod.medicalnewstoday.com/content/images/articles/314/314819/delicious-buffet-foods.jpg"
+            alt=""><br><br>
+        <p style="font-size: 24px;text-align: left;">Taste tthe deliciousness of our Food, made by the World Famous
+            Chefs. No Matter which part of the World you
+            are from...We Gurantee that You will find Your Cherished Dishes here!! <br>
+            Eat freely without worrying about Sanitation... All our Chefs and Staff are Fully Vaccinated!!!</p>
+    </div>
+    <button class="btn2" style="background-color: darkred; font-size: 17px;"><a href="https://google.com">Back to Crome</a></button>
+    <div class="cpyr">
+        <p>&#169;, Deepanshi Dey (12102975)</p>
+    </div>
+
+    <script>
+        function myFunction() {
+          alert("CONGRATULATIONS !!!!\n You are now a member of MAKE MY HOLIDAY !!!");
+        }
+        function myFunction2() {
+          let work=confirm("Do you really want to Reset the Filled Information?");
+          if(work){
+            document.getElementById("my_form").reset()
+          }
+          else{
+              alert("Your information has not been reset")
+          }
+        }
+    </script>
+</body>
+
+</html>
