@@ -1,0 +1,147 @@
+<!--***************** CSF 103: CA1 (QUESTION 1) ******************** -->
+<!--**************** By- Deepanshi Dey (12102975) ************** -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="This is an Employee Information Form">
+    <meta name="Keywords" content="Form, Information Form, Employee Form">
+    <title>Membership Form</title>
+    <style>
+        h1 {
+            background-color: antiquewhite;
+            text-align: center;
+            padding: 3px;
+            border-radius: 9px;
+        }
+        h2 {
+            text-align: center;
+        }
+        body {
+            background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+        }
+        .container {
+            position: center;
+            box-sizing: border-box;
+            border: 4px solid purple;
+            margin: 5px auto;
+            padding: 40px 50px;
+            background-color: beige;
+            background: rgba(255, 255, 255, 0.1);
+            width: 35%;
+            box-sizing: border-box;
+        }
+        .pic {
+            display: inline-block;
+            position: absolute;
+            top: 190px;
+            left: 870px;
+        }
+        .btn {
+            font-weight: bold;
+            padding: 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 15px;
+            position: absolute;
+            top: 30px;
+            right: 18px;
+            color: whitesmoke;
+            background-color: darkblue;
+        }
+        .btn:hover {
+            background-color: palevioletred;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <button class="btn">Contact Us</button>
+    </div>
+    <h1>MEMBERSHIP FORM</h1>
+    <h2>Please Enter The Following details:</h2>
+    <div class="pic">
+        <img src="https://www.kindpng.com/picc/m/78-785827_user-profile-avatar-login-account-male-user-icon.png" height="100px" width="100px" alt="">
+    </div>
+    <form id="my_form">
+        <div class="container">
+            <strong>Attach your Photograph: </strong>
+            <br>
+            <input type="file" onchange="readURL(this)" accept="image/*">
+            <br>
+            <br>
+            <strong>Enter Name: </strong><input type="text" name="Name" id="" placeholder="Name">
+            <br>
+            <br>
+            <strong>Enter Dob: </strong><input type="date" name="dob" id="" placeholder="Date of Birth">
+            <br>
+            <br>
+            <strong>Enter Email ID: </strong><input type="email" name="Email" id="" placeholder="Email Id">
+            <br>
+            <br>
+            <strong>Enter Phone no: </strong><input type="number" name="number" id="" placeholder="Phone number">
+            <br>
+            <br>
+            <strong>Enter Address: </strong><input type="text" name="address" id="" placeholder="Address">
+            <br>
+            <br>
+            <strong>Select Gender: </strong>Male<input type="radio" name="gender" id="">
+            Female<input type="radio" name="gender" id="">
+            Other<input type="radio" name="gender" id="">
+            <br>
+            <br>
+            <label for="Ed"><strong>Select Educational Qualification: </strong></label>
+            <select name="Eduactional Qualificaion" id="Ed">
+                <option value="">Choose</option>
+                <option value="10th Pass">10th Pass</option>
+                <option value="12th Pas">12th Pass</option>
+                <option value="Under Graduate">Under Graduate</option>
+                <option value="Post Graduate">Post Graduate</option>
+                <option value="PHD">PHD</option>
+                <option value="Others">Others</option>
+            </select>
+            <br>
+            <br>
+            <strong>Enter your Experience in Years: </strong><input type="number" name="Experience" id=""
+                placeholder="Experience (years)">
+            <br>
+            <br>
+            <label for="about"><strong>Your Expectations: </strong></label>
+            <br>
+            <textarea name="message" id="about" rows="5" cols="40">
+            </textarea>
+            <br>
+            <br>
+            <strong>Are you Indian? </strong><input type="checkbox" name="Indian" id="">
+            <br>
+            <br>
+            <input type="button" value="Submit" onclick="myFunction()"  
+            style="background-color:darkred;color: whitesmoke;font-size: 17px;">&nbsp;&nbsp;&nbsp;
+            <input type="button" value="Reset" onclick="myFunction2()"  
+            style="background-color:darkred;color: whitesmoke;font-size: 17px;">
+        </div>
+        </div>
+        </div>
+    </form>
+
+    <script>
+        function myFunction() {
+          alert("You have successfully Registed to be an Employee of MAKE MY HOLIDAY !!!");
+        }
+        function myFunction2() {
+          let work=confirm("Do you really want to Reset the Filled Information?");
+          if(work){
+            alert("Your information has been Reset");
+            document.getElementById("my_form").reset()
+          }
+          else{
+              alert("Your information has not been reset")
+          }
+        }
+    </script>
+</body>
+</html>
