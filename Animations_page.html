@@ -1,0 +1,251 @@
+<!--***************** CSF 103: CA2 (QUESTION 1) ******************** -->
+<!--**************** By- Deepanshi Dey (12102975) ************** -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSF103 CA2: Deepanshi Dey</title>
+    <style>
+        body{
+            background-image: url('https://images.unsplash.com/photo-1475274047050-1d0c0975c63e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bmlnaHQlMjBza3l8ZW58MHx8MHx8&w=1000&q=80');
+            background-size: cover;
+        }
+        h1{
+            color: aliceblue;
+            font-weight: bold;
+            font-size: 35px;
+            text-align: center;
+            /* background-color: rgba(255, 255, 255, 0.1); */
+            background-color:navy;
+            border: 2px solid white;
+            margin: 40px;
+            box-shadow:5px 5px 100px blue;
+            border-radius: 5px;
+            padding: 10px,20px;
+        }
+        h2{
+            font-size: 30px;
+            font-weight: bold;
+            position: absolute;
+            color:aqua;
+            text-shadow: 100px 100px 2100px darkred;
+        }
+        h3{
+            position: absolute;
+            left: 110px;
+            color: aliceblue;
+        }
+        .star_blink{
+            animation-name: blink;
+            animation-iteration-count: infinite;
+            animation-fill-mode: backwards;
+            justify-content: center;
+            justify-items: center;
+            filter: brightness(15%);
+        }
+        #s1{
+            position: absolute;
+            top: 150px;
+            left: 910px;
+            animation-duration: 4s;
+        }
+        #s2{
+            position: absolute;
+            top: 180px;
+            left: 1010px;
+            animation-duration: 7s;
+        }
+        #s3{
+            position: absolute;
+            top: 186px;
+            left: 1110px;
+            animation-duration: 5s;
+        }
+        #s4{
+            position: absolute;
+            top: 155px;
+            left: 1210px;
+            animation-duration: 6s;
+        }
+        #s5{
+            position: absolute;
+            top: 190px;
+            left: 1310px;
+            animation-duration: 3s;
+        }
+        #s6{
+            position: absolute;
+            top: 180px;
+            left: 1410px;
+            animation-duration: 8s;
+        }
+        #s7{
+            position: absolute;
+            top: 190px;
+            left: 810px;
+            animation-duration: 5s;
+        }
+        #s8{
+            position: absolute;
+            top: 200px;
+            left: 710px;
+            animation-duration: 4s;
+        }
+        #s9{
+            position: absolute;
+            top: 160px;
+            left: 610px;
+            animation-duration: 3s;
+        }
+        @keyframes blink{
+            0%{
+                height: 80px;
+                filter: brightness(15%);  
+            }
+            20%{
+                height: 85px;
+                filter: brightness(35%);
+            }
+            40%{
+                height:90px;
+                filter: brightness(55%);
+            }
+            60%{
+                height: 95px;
+                filter: brightness(75%);
+            }
+            80%{
+                height: 100px;
+                filter: brightness(90%);
+            }
+            100%{
+                height: 105px;
+                filter: brightness(105%);
+            }
+        }
+       
+        .star_blink:hover{
+            height: 120px;
+            filter: brightness(290%);
+        }
+        #s10{
+            position: absolute;
+            top: 350px;
+            left:720px;
+            /* ************************EASE IN-OUT USED HERE*********************** */
+            transition: all 1s ease-in-out;   
+            filter: brightness(200%);
+            filter: contrast(100%);
+        }
+        .star_shoot:hover{
+            /* ************************TRANSLATE USED HERE************************* */
+            transform: translate(600px,100px);
+            filter: brightness(200%);
+        }
+        .ast{
+            position: absolute;
+            top: 590px;
+            left: 830px;
+            transition-property: size;
+            transition-duration: 2s;
+            transition-timing-function: ease-in-out;
+            /* *************************EASE OUT USED HERE************************* */
+            transition: all 2s ease-out;
+            filter: brightness(30%);
+        }
+        .ast:hover{
+            /* ***************************SCALE USED HERE************************** */
+            transform: scale(2.5);
+            filter: brightness(120%);
+        }
+        #e1{
+            position: absolute;
+            top: 790px;
+            left:830px;
+            /* *******************EASE IN USED HERE****************** */
+            transition: all 8s ease-in;
+        }
+        #e1:hover{
+            /* *******************ROTATE USED HERE****************** */
+            transform:rotate(360deg);
+        }
+        .circle{
+            position: absolute;
+            top:1010px;
+            left: 865px;
+            height: 90px;
+            width: 90px;
+            border-radius: 50px;
+            animation-name: cycle;
+            animation-iteration-count: infinite;
+            animation-fill-mode: backwards;
+            animation-duration: 8s;
+            box-shadow:12px 12px 100px gray ;
+        }
+        @keyframes cycle{
+            0%{
+                height: 90px;
+                width: 90px;
+                border-radius: 70px;
+                background-color: darkgoldenrod; 
+            }
+            55%{
+                height: 120px;
+                width: 120px;
+                border-radius: 70px;
+                background-color: brown;
+            }
+            100%{
+                height:85px;
+                width: 85px;
+                border-radius: 70px;
+                background-color: floralwhite;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>WONDERS OF THE NIGHT SKY</h1>
+    <img class="star_blink" id="s1" src="https://thumbs.dreamstime.com/b/forme-d-%C3%A9toile-isolement-sur-le-fond-noir-ic%C3%B4ne-logo-image-de-symbole-pour-l-%C3%A9l%C3%A9ment-graphique-la-du-d%C3%A9coration-embellir-144735098.jpg" alt="unsplash" height="50">
+    <img class="star_blink" id="s2" src="https://thumbs.dreamstime.com/b/forme-d-%C3%A9toile-isolement-sur-le-fond-noir-ic%C3%B4ne-logo-image-de-symbole-pour-l-%C3%A9l%C3%A9ment-graphique-la-du-d%C3%A9coration-embellir-144735098.jpg" alt="unsplash" height="50">
+    <img class="star_blink" id="s3" src="https://thumbs.dreamstime.com/b/forme-d-%C3%A9toile-isolement-sur-le-fond-noir-ic%C3%B4ne-logo-image-de-symbole-pour-l-%C3%A9l%C3%A9ment-graphique-la-du-d%C3%A9coration-embellir-144735098.jpg" alt="unsplash" height="50">
+    <img class="star_blink" id="s4" src="https://thumbs.dreamstime.com/b/forme-d-%C3%A9toile-isolement-sur-le-fond-noir-ic%C3%B4ne-logo-image-de-symbole-pour-l-%C3%A9l%C3%A9ment-graphique-la-du-d%C3%A9coration-embellir-144735098.jpg" alt="unsplash" height="50">
+    <img class="star_blink" id="s5" src="https://thumbs.dreamstime.com/b/forme-d-%C3%A9toile-isolement-sur-le-fond-noir-ic%C3%B4ne-logo-image-de-symbole-pour-l-%C3%A9l%C3%A9ment-graphique-la-du-d%C3%A9coration-embellir-144735098.jpg" alt="unsplash" height="50">
+    <img class="star_blink" id="s6" src="https://thumbs.dreamstime.com/b/forme-d-%C3%A9toile-isolement-sur-le-fond-noir-ic%C3%B4ne-logo-image-de-symbole-pour-l-%C3%A9l%C3%A9ment-graphique-la-du-d%C3%A9coration-embellir-144735098.jpg" alt="unsplash" height="50">
+    <img class="star_blink" id="s7" src="https://thumbs.dreamstime.com/b/forme-d-%C3%A9toile-isolement-sur-le-fond-noir-ic%C3%B4ne-logo-image-de-symbole-pour-l-%C3%A9l%C3%A9ment-graphique-la-du-d%C3%A9coration-embellir-144735098.jpg" alt="unsplash" height="50">
+    <img class="star_blink" id="s8" src="https://thumbs.dreamstime.com/b/forme-d-%C3%A9toile-isolement-sur-le-fond-noir-ic%C3%B4ne-logo-image-de-symbole-pour-l-%C3%A9l%C3%A9ment-graphique-la-du-d%C3%A9coration-embellir-144735098.jpg" alt="unsplash" height="50">
+    <img class="star_blink" id="s9" src="https://thumbs.dreamstime.com/b/forme-d-%C3%A9toile-isolement-sur-le-fond-noir-ic%C3%B4ne-logo-image-de-symbole-pour-l-%C3%A9l%C3%A9ment-graphique-la-du-d%C3%A9coration-embellir-144735098.jpg" alt="unsplash" height="50">
+    <h2 style="position: absolute;top:140px;left: 100px;">The Twinking of Stars : </h2>
+    <h3 style="position: absolute;top: 210px;left: 110;color: aliceblue;font-size: 17px;">The twinkling of stars occurs due to atmospheric refraction<br> of star's light.
+         The Optical Density of Air varies continuously<br> in the different layers of the atmosphere.Since the hot and<br> cold layers of air keep moving,
+          the bending of the light changes<br> too,
+          which causes the star's appearance to wobble or twinkle.</h3>
+    <h2 style="position: absolute;top: 330px; left: 100px;">A Shooting Star( Place the curser over) : </h2>
+    <h3 style="position: absolute;top: 410px;left: 110px; color: aliceblue;">Shooting stars look like stars that quickly shoot across the sky, but<br>
+         they are not stars. A shooting star is really a meteors or asteroids<br> or dust that hits Earth's atmosphere from space. It moves so fast<br>
+          that it heats up and glows as it moves through the atmosphere.</h3>
+    <img class="star_shoot" id="s10" src="https://i.natgeofe.com/n/b2eb23de-db0d-4e95-bd7c-24b7dca7017d/skywatch-new-year-january-2.jpg?w=636&h=358" alt="unsplash" height="150">
+    <h2 style="position: absolute;top: 530px; left: 100px;">Asteroid movements (Place the curser over) : </h2>
+    <h3 style="position: absolute;top: 610px;left: 110px;color: aliceblue;">As asteroids revolve around the sun in their elliptical orbits, they also<br>
+         rotate, sometimes tumbling quite erratically. More than 150 asteroids<br> are also known to have a small companion moon, according to NASA,<br>
+          with some having two moons.</h3>
+    <img class="ast" id="a1" src="https://cdn.images.express.co.uk/img/dynamic/151/590x/Asteroid-news-NASA-large-space-rock-heading-Earth-approach-hit-tonight-NASA-news-1181138.jpg?r=1569146922425" alt="unsplash" height="100">
+    <h2 style="position: absolute;top: 750px; left: 100px;">Rotation of Planets (Place the curser over) : </h2>
+    <h3 style="position: absolute;top:800px;left: 110px;color: aliceblue;">Our planets have continued spinning because of inertia. In the vacuum<br>
+         of space, spinning objects maintain their momentum and direction —<br> their spin — because no external forces have been applied to stop them.<br>
+          And so, the world — and the rest of the planets in our solar system —<br> keeps spinning.</h3>
+    <img class="earth" id="e1" src="https://climate.nasa.gov/system/internal_resources/details/original/309_ImageWall5_768px-60.jpg" alt="unsplash" height="140">
+    <h2 style="position: absolute;top: 950px; left: 100px;">Life cycle of a Star : </h2>
+    <h3 style="top:1020px;">1st: Average Star (Golden)</h3>
+    <h3 style="top: 1040px;">2nd: Red Super Giant Star (Red)</h3>
+    <h3 style="top: 1060px;">3rd: White Dwarf Star (White)</h3>
+    <div class="circle"></div>
+    <h3 style="position: absolute;top: 1170px; left: 100px;color: aliceblue;height: 20px;background-color:blue;padding: 10px 10px;">By- Deepanshi Dey (12102975): </h3>
+    <div class="circle"></div>
+</body>
+</html>
+
+
+ 
